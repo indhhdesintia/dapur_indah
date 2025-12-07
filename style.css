@@ -1,0 +1,516 @@
+/* ==========================================================
+   FILE: style.css
+   ========================================================== */
+:root {
+    --primary-color: #FF5555; /* Warna Kopi Cokelat */
+    --secondary-color:#FF937E; /* Warna Cokelat Muda */
+    --text-color: #333;
+    --bg-light: #f4f4f4;
+    --bg-white: #C1E59F;
+}
+
+body {
+    font-family: 'Freeman', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-color); 
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1{
+    
+        font-family: "Freeman", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      
+      
+}
+
+
+.d-flex{
+    display: flex;
+    
+}
+
+.f-warp{
+    display: wrap;
+}
+.img-responsive{
+    width: 100%;
+}
+
+.js-spacebetween{
+    justify-content: space-between;
+}
+
+
+.ai-center{
+    align-items: center;
+}
+
+.spacersection{
+    padding: 2% 0;
+}
+
+.spacercontent{
+    margin-bottom:20px ;
+}
+
+.bigtitle{
+    font-size: 3em;
+}
+
+
+/* buttun */
+
+.bigbtn{
+    padding: 20px 40px;
+    background: black;
+    color: bisque;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    
+}
+
+
+
+/* akhr button */
+
+/* header */
+.header{
+    /* Navbar */
+    background-color: white; /* Latar belakang putih */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    position: sticky; /* Membuat navbar menempel saat di-scroll */
+    top: 0;
+    z-index: 1000; /* Memastikan navbar selalu di atas */
+    padding: 10px 0; /* Padding vertikal */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Memisahkan logo, link, dan tombol */
+    align-items: center; /* Pusat vertikal */
+}
+
+.logo-title a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex; /* Penting: Membuat gambar dan teks sejajar */
+    align-items: center; /* Memastikan semuanya di tengah vertikal */
+    gap: 10px; /* Jarak antara gambar dan teks */
+}
+
+/* Gaya baru untuk gambar logo */
+.logo-title .logo-img {
+    height: 100px; /* Atur tinggi gambar logo */
+    width: auto; /* Biarkan lebar mengikuti proporsi */
+}
+
+/* Gaya untuk Link Navigasi */
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 25px; /* Jarak antar link */
+    font-size: 20px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent; /* Garis bawah transparan */
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color); /* Garis bawah saat hover */
+}
+
+/* Gaya Tombol Aksi */
+.nav-action .btn-action {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-action .btn-action:hover {
+    background-color: #d84545; /* Warna lebih gelap saat hover */
+}
+
+
+/* Menu Toggle (untuk tampilan mobile) */
+.menu-toggle {
+    display: none; /* Sembunyikan tombol burger di desktop */
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* ==========================================================
+   RESPONSIVE: Tampilan Mobile (Lebar layar kurang dari 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+    .nav-links {
+        /* Posisikan link di bawah (menu tumpuk) saat mobile */
+        display: none; /* Sembunyikan secara default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Di bawah header */
+        left: 0;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links a {
+        margin: 0;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+
+    /* Tampilkan tombol burger */
+    .menu-toggle {
+        display: block; 
+    }
+    
+    /* Sembunyikan tombol aksi di mobile */
+    .nav-action {
+        display: none;
+    }
+}
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 22px;
+font-weight: bold;
+color: #333;
+}
+
+
+.logo img {
+width: 45px;
+height: 45px;
+}
+
+
+.nav-links {
+display: flex;
+gap: 25px;
+}
+
+
+.nav-links a {
+text-decoration: none;
+color: #333;
+font-weight: 500;
+transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+color: #55f52e;
+}
+
+
+
+.spacersection {
+    padding: 60px 0;
+}
+
+/* --- HEADER & NAVIGASI --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 a {
+    color: var(--bg-white);
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+nav a {
+    color: var(--bg-white);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffc;
+}
+
+/* --- MENU LIST (INDEX.HTML) --- */
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.shopping-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Kartu Produk */
+.shopping-item {
+    background-color: var(--bg-white);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.shopping-item:hover {
+    transform: translateY(-5px);
+}
+
+.shopping-item h3 {
+    color: var(--secondary-color);
+    margin-top: 10px;
+}
+/* Kartu Produk */
+.shopping-item {
+    background-color: var(--bg-white);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+/* --- TAMBAHKAN KODE INI DI SINI --- */
+.shopping-item img {
+    height: 200px; /* Tentukan TINGGI tetap di sini (misalnya 200 piksel) */
+    width: 100%; /* Lebar akan mengisi penuh container */
+    object-fit: cover; /* Penting: Memastikan gambar mengisi area tanpa terdistorsi */
+    border-radius: 8px; /* Sudut melengkung untuk gambar */
+}
+/* ------------------------------------- */
+/*Berakhirnya Menu-list*/
+
+.btn-detail {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-detail:hover {
+    background-color: var(--secondary-color);
+}
+.detail-img {
+    /* Menambahkan aturan ini untuk mengontrol ukuran gambar */
+    max-width: 300px; /* Atur nilai ini sesuai ukuran maksimal yang Anda inginkan */
+    height: auto;
+    display: block; /* Agar gambar berada di barisnya sendiri dan max-width bekerja optimal */
+    margin: 20px auto; /* Menengahkan gambar */
+    border-radius: 8px; /* Tambahkan sedikit estetika */
+}
+
+/* Tag Status */
+.status-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.out-of-stock {
+    background-color: #dc3545; /* Merah */
+    color: white;
+}
+
+.promo {
+    background-color: #28a745; /* Hijau */
+    color: white;
+}
+
+.available {
+    background-color: #ffc107; /* Kuning */
+    color: var(--text-color);
+}
+
+/* --- DETAIL.HTML --- */
+.product-detail-card {
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-detail-card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 15px;
+}
+
+#calculator {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#quantity {
+    padding: 10px;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Penting agar padding tidak melebarkan elemen */
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Gaya untuk pesan error dan sukses */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+.category{
+   .categoty-item{
+          height:450px;
+          overflow: hidden;
+          position: relative;
+          z-index: 1;
+          .overlay{
+            opacity: 0;
+            z-index: 5;
+            position: absolute;
+            padding: 20px;
+            height: 100%;
+            width: 96%;
+            background-color: rgba(182, 140, 61, 0.495);
+            color: white;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1)2s;
+            .btn-outline{
+                text-decoration: none;
+                padding: 15px;
+                background: none;
+                color: white;
+                display: inline-block;
+                border: 2px solid white;
+                font-size: 12px;
+                letter-spacing: 2px;
+                
+            }
+            .btn-outline:hover{
+                background-color:white;
+                color: black;
+              }
+          }
+        &:hover .overlay{
+            opacity: 1;
+            /* filter: blur(8px); */
+        } 
+        img{
+            filter: blur(0px);
+            transition: cubic-bezier(0.215, 0.610, 0.355, 1) 3s; 
+        }
+
+        &:hover{
+            img{
+                 filter: blur(3px); 
+            }
+        }
+   }
+}
+.about-us {
+    padding-top: 20px;
+    border-top: 1px solid #000; /* Garis horizontal hitam di atas */
+}
+
+.about-us h2 {
+    font-size: 1.8em;
+    color: #5C4033; 
+    font-weight: normal;
+    text-align: left;
+  
+}
+
+.about-us p {
+    margin: 5px 0;
+    line-height: 1.5;
+    text-align: left;
+    color: #5C4033;
+}
+
