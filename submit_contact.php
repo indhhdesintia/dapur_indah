@@ -5,9 +5,10 @@ $response = ['success' => false, 'message' => 'Terjadi kesalahan.'];
 
 // Konfigurasi Database
 $servername = "localhost"; // Ganti jika berbeda
-$username = "root"; // Ganti dengan username DB Anda
-$password = ""; // Ganti dengan password DB Anda
-$dbname = "dapur"; // Nama database yang sudah dibuat
+$username = "asyifah"; // Ganti dengan username DB Anda
+$password = "!RwQ.bwGuc?BaOT("; // Ganti dengan password DB Anda
+$dbname = "asyifah_dbindah"; // Nama database yang sudah dibuat
+
 
 // Mengambil data JSON dari request
 $data = json_decode(file_get_contents("php://input"), true);
@@ -52,4 +53,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && $data) {
 }
 
 echo json_encode($response);
+
 ?>
