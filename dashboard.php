@@ -1,9 +1,10 @@
 <?php
 // Konfigurasi Database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "dapur";
+$servername = "localhost"; // Ganti jika berbeda
+$username = "asyifah"; // Ganti dengan username DB Anda
+$password = "!RwQ.bwGuc?BaOT("; // Ganti dengan password DB Anda
+$dbname = "asyifah_dbindah"; // Nama database yang sudah dibuat
+
 
 // Buat Koneksi
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -73,4 +74,5 @@ $result = $conn->query($sql);
 </html>
 <?php
 $conn->close();
+
 ?>
